@@ -1,16 +1,14 @@
 import classes from './checkbox.module.css';
-import { useState } from 'react';
 
-const Checkbox = () => {
-  const [value, setValue] = useState(false);
+const Checkbox = ({isChecked, setIsChecked}) => {
   const handleChange = () => {
-    setValue(!value);
+    setIsChecked(!isChecked);
   };
   return (
     <div className={classes.checkbox}>
       <input
         className={classes.icon}
-        value={value}
+        value={isChecked}
         onChange={handleChange}
         type="checkbox"
       />
