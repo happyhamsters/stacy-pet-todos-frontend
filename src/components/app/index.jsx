@@ -1,14 +1,23 @@
-import classes from './app.module.css';
-import Checkbox from '../checkbox';
-import { useState } from 'react';
-
+import Collection from '../collection'
 
 function App() {
-  const [isDone, setIsDone] = useState(false)
+  const initialTodos = [
+    {
+        title: "Hello world!",
+        text: "Hello world",
+        isDone: false,
+        id: "6538ae1536fc8391ff88176f"
+    },
+    {
+        title: "new",
+        text: "to",
+        isDone: false,
+        id: "653a254135d26f2360d45dec"
+    }
+]
+  return <div>
+    <Collection initialTodos={initialTodos} /></div>;
 
-  return <div className={classes.app}>Hello world!
-    <Checkbox isChecked={isDone} setIsChecked={setIsDone} />
-  </div>;
 }
 
 export default App;

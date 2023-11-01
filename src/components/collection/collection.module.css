@@ -1,0 +1,8 @@
+.collection {
+display: flex;
+width: 1080px;
+height: 720px;
+padding: 35px 51px;
+align-items: flex-start;
+gap: 30px;
+}
