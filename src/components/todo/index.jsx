@@ -7,18 +7,17 @@ import { useState } from 'react';
 const Todo = ({ title, text, id, deleteTodo }) => {
   const [isDone, setIsDone] = useState(false)
 
-  return <div>
-    <tr className={classes.todo}>
+  return (
+    <div className={classes.todo}>
       <div className={classes.cardTitle}>
-      <Checkbox isChecked={isDone} setIsChecked={setIsDone} />
-      <td className={classes.title}>{title}</td>
-      <CloseButton id={id} deleteTodo={deleteTodo}/>
+        <Checkbox isChecked={isDone} setIsChecked={setIsDone} />
+        <span className={classes.title}>{title}</span>
+        <CloseButton id={id} deleteTodo={deleteTodo} />
       </div>
       <div className={classes.cardText}>
-      <td className={classes.text}>{text}</td>
+        <p className={classes.text}>{text}</p>
       </div>
-    </tr>
-  </div>;
+    </div>)
 }
 
 export default Todo;

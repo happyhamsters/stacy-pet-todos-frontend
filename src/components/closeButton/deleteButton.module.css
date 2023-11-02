@@ -2,8 +2,5 @@
 width: 24px;
 height: 24px;
 background: url('../../../public/deleteButton.svg'), white 50% / contain no-repeat;
-display: flex;
-justify-content: center;
-align-items: center;
 }
 
