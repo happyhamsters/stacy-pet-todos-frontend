@@ -1,0 +1,17 @@
+.addButton {
+width: 48px;
+height: 48px;
+flex-shrink: 0;
+background: url('../../../public/addButton.svg'), white 50% / contain no-repeat;
+}
+
+.card {
+display: flex;
+height: 200px;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 4px;
+background: #FFF;
+}
