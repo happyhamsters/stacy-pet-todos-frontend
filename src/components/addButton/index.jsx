@@ -1,9 +1,9 @@
 import classes from './addButton.module.css';
 
-const AddButton = () => {
+const AddButton = ({addTodo}) => {
   return (
     <div className={classes.card}>
-    <button className={classes.addButton}> 
+    <button className={classes.addButton} onClick={addTodo}> 
     </button>
     </div>
 );
