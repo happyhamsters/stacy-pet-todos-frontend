@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import todosService from '../../services/todos'
 
 function App() {
-  const [newTitle, setnewTitle] = useState('')
-  const [newText, setnewText] = useState('')
 
   const initialTodos = [
     {
@@ -40,8 +38,6 @@ const addTodo = (event) => {
     .create(newTodo)
     .then(returnedTodo => {
       setTodos(todos.concat(returnedTodo))
-      setnewTitle('')
-      setnewText('')
     })
 }
 
