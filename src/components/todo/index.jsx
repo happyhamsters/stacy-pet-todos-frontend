@@ -1,10 +1,10 @@
 import classes from './todo.module.css';
 import Checkbox from '../checkbox'
-import CloseButton from '../closeButton';
+import DeleteButton from '../deleteButton';
 import { useState } from 'react';
 
 
-const Todo = ({ title, text, id, deleteTodo }) => {
+const Todo = ({ title, text, deleteTodo }) => {
   const [isDone, setIsDone] = useState(false)
 
   return (
@@ -12,7 +12,7 @@ const Todo = ({ title, text, id, deleteTodo }) => {
       <div className={classes.cardTitle}>
         <Checkbox isChecked={isDone} setIsChecked={setIsDone} />
         <span className={classes.title}>{title}</span>
-        <CloseButton id={id} deleteTodo={deleteTodo} />
+        <DeleteButton deleteTodo={deleteTodo} />
       </div>
       <div className={classes.cardText}>
         <p className={classes.text}>{text}</p>

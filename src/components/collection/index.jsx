@@ -1,24 +1,18 @@
 import classes from './collection.module.css';
 import Todo from '../todo'
-import { useState } from 'react';
 import AddButton from '../addButton';
 
-const Collection = ({ initialTodos }) => {
+const Collection = ({ todos, addTodo, deleteTodo}) => {
 
-const [todos, setTodos] = useState(initialTodos)
-
-const deleteTodo = id => {
-    setTodos(todos.filter(todo => todo.id !== id));
-  };
   return (
-    <div className={classes.collection} style={{display:'flex'}}>
+    <div className={classes.collection}>
       {todos.map(todo =>
         <Todo key={todo.id}
           title={todo.title}
           text={todo.text}
-          deleteTodo={deleteTodo}
+          deleteTodo={() => deleteTodo(todo.id)}
         />)}
-      <AddButton></AddButton>
+      <AddButton addTodo={addTodo}></AddButton>
     </div>
   )
 }
