@@ -5,7 +5,7 @@ import AddButton from '../addButton';
 const Collection = ({ todos, addTodo, deleteTodo}) => {
 
   return (
-    <div className={classes.collection} style={{ display: 'flex' }}>
+    <div className={classes.collection}>
       {todos.map(todo =>
         <Todo key={todo.id}
           title={todo.title}

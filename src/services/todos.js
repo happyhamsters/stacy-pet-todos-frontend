@@ -12,7 +12,6 @@ const create = newTodo => {
 }
 
 const deleteTodo = (id) => {
-    console.log(`Deleting todo with id: ${id}`);
     const request = axios.delete(`${baseUrl}/${id}`)
     return request.then(response => response.data)
 }
