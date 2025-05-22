@@ -1,9 +1,15 @@
 import classes from './checkbox.module.css';
 
-const Checkbox = ({isChecked, onClick}) => {
+interface CheckboxProps {
+  isChecked: boolean;
+  onClick: () => void;
+}
+
+const Checkbox = ({ isChecked, onClick }: CheckboxProps) => {
   const handleChange = () => {
     onClick();
   };
+
   return (
     <div className={classes.checkbox}>
       <input
