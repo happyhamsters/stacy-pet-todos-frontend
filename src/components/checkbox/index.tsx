@@ -1,14 +1,20 @@
 import classes from './checkbox.module.css';
 
-const Checkbox = ({isChecked, setIsChecked}) => {
+interface CheckboxProps {
+  isChecked: boolean;
+  onClick: () => void;
+}
+
+const Checkbox = ({ isChecked, onClick }: CheckboxProps) => {
   const handleChange = () => {
-    setIsChecked(!isChecked);
+    onClick();
   };
+
   return (
     <div className={classes.checkbox}>
       <input
         className={classes.icon}
-        value={isChecked}
+        checked={isChecked}
         onChange={handleChange}
         type="checkbox"
       />
